@@ -1,0 +1,43 @@
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    var s Shape = Circle{5.0}
+    fmt.Printf("Shape Type = %T, Shape Value = %v\n", s, s)
+    fmt.Printf("Area = %f, Perimeter = %f\n\n", s.Area(), s.Perimeter())
+
+    s = Rectangle{4.0, 6.0}
+    fmt.Printf("Shape Type = %T, Shape Value = %v\n", s, s)
+    fmt.Printf("Area = %f, Perimeter = %f\n", s.Area(), s.Perimeter())
+}
+
+Shape Type = main.Circle, Shape Value = {5}
+Area = 78.539816, Perimeter = 31.415927
+
+Shape Type = main.Rectangle, Shape Value = {4 6}
+Area = 24.000000, Perimeter = 20.000000
+
+2)package main
+
+import (
+    "fmt"
+)
+
+
+func CalculateTotalArea(shapes ...Shape) float64 {
+    totalArea := 0.0
+    for _, s := range shapes {
+        totalArea += s.Area()
+    }
+    return totalArea
+}
+
+func main() {
+    totalArea := CalculateTotalArea(Circle{2}, Rectangle{4, 5}, Circle{10})
+    fmt.Println("Total area = ", totalArea)
+}
+
+Total area =  346.7256359733385

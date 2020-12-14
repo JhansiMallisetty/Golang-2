@@ -1,0 +1,67 @@
+package main
+import (
+    "fmt"
+)
+type User struct {
+    Name string
+    Email string
+    Age int
+}
+func main() {
+    rob := User{"rob', "rob@lco.dev", 34}
+    fmt.printf("%+v\n", rob)
+    fmt.Printf("%v\n", rob.Email)
+    var sam = new(User)
+    sam.Name = "sam"
+    sam.Email = "sam@lcom.dev"
+    sam.Age = 22
+    fmt.Printf("%+v\n", sam)
+    var tobby = &user{"tobby", "tobby@lco.dev", 22}
+    fmt.Printf("%+v\n", tobby)
+}
+
+sam
+sam@lcom.dev
+22
+
+2)
+
+package main
+
+import (
+	"fmt"
+)
+
+
+type Person struct {
+	FirstName string
+	LastName  string
+	Age       int
+}
+
+func main() {
+	
+	var p Person 
+	fmt.Println(p)
+
+	
+	p1 := Person{"jhansi", "mallisetty", 24}
+	fmt.Println("Person1: ", p1)
+
+	
+	p2 := Person{
+		FirstName: "suji",
+		LastName:  "mallisetty",
+		Age:       22,
+	}
+	fmt.Println("Person2: ", p2)
+
+	
+	p3 := Person{FirstName: "navya"}
+	fmt.Println("Person3: ", p3)
+}
+
+{  0}
+Person1:  {jhansi mallisetty 24}
+Person2:  {suji mallisetty 22}
+Person3:  {navya  0}
